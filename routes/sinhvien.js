@@ -74,4 +74,5 @@ router.get('/sortTB', function(req,res,next){
     studentsArray.sort((a,b) => a.DTB - b.DTB)
     res.json(studentsArray)
 })
+
 module.exports = router;
