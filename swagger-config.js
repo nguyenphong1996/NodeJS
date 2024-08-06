@@ -3,9 +3,9 @@ const options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Your API Title',
+      title: 'AND103',
       version: '1.0.0',
-      description: 'A description of your API',
+      description: 'Dự án viết API cho moblie',
     },
   },
   apis: ['./routes/*.js'], // Đường dẫn đến các file định nghĩa API
