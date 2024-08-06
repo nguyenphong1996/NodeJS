@@ -9,6 +9,7 @@ const mongoose = require('mongoose');
 require('./models/category');
 require('./models/product');
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var sinhvienRouter = require('./routes/sinhvien');
@@ -32,7 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //connect database
-mongoose.connect('mongodb://127.0.0.1:27017/NodeJS')
+mongoose.connect('mongodb+srv://phongnguyen:Kinghaise1996%40@cluster0.j79dlf6.mongodb.net//and103')
   .then(() => console.log('Kết nối tới DBMongo thành công'))
   .catch(err => console.log('Kết nối thất bại: ', err));
 
@@ -41,7 +42,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/sinhvien', sinhvienRouter);
 app.use('/category', categoryRouter);
-app.use('/product', productRouter);
+app.use('/products', productRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
